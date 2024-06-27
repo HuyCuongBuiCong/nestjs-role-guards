@@ -1,0 +1,56 @@
+### Create Admin
+POST localhost:3000/user
+Content-Type: application/json
+
+{
+    "name": "admin01",
+    "email": "admin01@gmail.com",
+    "password": "changeme",
+    "roles": [
+        {
+            "name": "Admin"
+        }
+    ]
+}
+
+### Create User
+POST localhost:3000/user
+Content-Type: application/json
+
+{
+  "name": "user01",
+  "email": "user01@gmail.com",
+  "password": "changeme",
+  "roles": [
+    {
+      "name": "User"
+    }
+  ]
+}
+
+### Login as Admin
+POST localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "admin01@gmail.com",
+    "password": "changeme"
+}
+
+### Login as User
+POST localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "user01@gmail.com",
+  "password": "changeme"
+}
+
+
+### Get Order with Bearer Token
+GET localhost:3000/orders
+Authorization: Bearer token
+
+
+
+
